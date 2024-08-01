@@ -33,7 +33,7 @@ function draw(){
     movimentaRaquete();
     colideRaquete();
     //chamando a borda
-    Borda()
+    Borda();
 }
 
 //função bolinha
