@@ -32,8 +32,6 @@ function draw(){
     criarRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete);
     movimentaRaquete();
     colideRaquete();
-    //chamando a borda
-    Borda();
 }
 
 //função bolinha
