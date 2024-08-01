@@ -2,10 +2,17 @@
 let xBolinha = 300;
 let yBolinha = 200;
 let tamBolinha = 25;
+let raioBolinha = tamBolinha/2;
 
 //config velocidade bolinha
 let xvelocidadeBolinha = 6;
 let yvelocidadeBolinha = 6;
+
+//aqui estou configurando a raquete
+let xRaquete = 5;
+let yRaquete = 150;
+let larguraRaquete = 10;
+let alturaRaquete =90;
 
 function setup(){
     //aqui vou criar minha "mesa"
@@ -23,10 +30,14 @@ function draw(){
     moveBolinha();
     //chamando a borda
     Borda();
+    criarRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete);
+    movimentaRaquete();
+    colideRaquete;
 }
 
 //função bolinha
 function criaBolinha(xBolinha, yBolinha,tamBolinha){
+    fill("red")
     circle (xBolinha,yBolinha,tamBolinha);
 }
 
@@ -44,3 +55,27 @@ function Borda(){
         yvelocidadeBolinha *= -1;
     }
 }
+//função responsável por criar o retângulo que apresenta a raquete
+function criarRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete) {
+    fill("blue");
+    Reflect(xRaquete, yRaquete, larguraRaquete, alturaRaquete);
+}
+//função responsável por movimentar a raquete
+function movimentaRaquete(){
+}
+    if(keyIsDown(UP_ARROW)){
+        yRaquete -= 10;
+    }
+    if(keyIsDown(DOWN_ARROW)){
+        yRaquete +=10;
+    }
+
+{
+//função resposável por quando a bolinha bater na raquete, retornar em direção contrária.
+function colideRaquete()}
+
+    if(xBolinha - raio Bolinha < xRaquete + larguraRaquete && yBolinha - raioBolinha < yRaquete + alturaRaquete && yBolinha + raioBolinha > yRaquete){
+
+        xvelocidadeBolinha *= -1;
+    }
+
